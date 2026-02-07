@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Pead's Putts - Services";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2>Tutoring Calculator</h2>
+
+        <form id="tutorForm">
+            <div class="mb-3">
+                <label for="hours" class="form-label">Hours needed</label>
+                <input type="number" class="form-control" id="hours" min="0.1" step="0.1" placeholder="Enter hours" />
+                <div class="invalid-feedback">Please enter a positive number of hours.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="rate" class="form-label">Rate (per hour)</label>
+                <input type="text" class="form-control" id="rate" value="$25.00" readonly />
+            </div>
+
+            <div class="mb-3">
+                <button id="calculate" type="button" class="btn btn-success" >Calculate Total</button>
+            </div>
+
+            <div class="mb-3">
+                <label for="total" class="form-label">Total</label>
+                <input type="text" class="form-control" id="total" readonly />
+            </div>
+
+            <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Back to Home</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/services.js" asp-append-version="true"></script>
+}

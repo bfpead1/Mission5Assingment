@@ -1,0 +1,168 @@
+/* Golf theme color variables */
+:root {
+  --golf-dark: #1a3c17;
+  --golf-green: #2d6a2a;
+  --golf-fairway: #3d8b36;
+  --golf-light: #e8f0e8;
+  --golf-sand: #f5f0e6;
+  --golf-gold: #b8860b;
+}
+
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--golf-light);
+  color: #1a2f18;
+}
+
+/* Main content grows so footer stays at bottom */
+body > .container {
+  flex: 1 0 auto;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem var(--golf-light), 0 0 0 0.25rem var(--golf-green);
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: 1.25rem 0;
+  background-color: var(--golf-dark);
+  color: #c5d0c5;
+}
+
+.footer .container {
+  color: #c5d0c5;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--golf-dark) !important;
+  border-bottom: 3px solid var(--golf-green) !important;
+}
+
+a.navbar-brand {
+  color: var(--golf-sand) !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link {
+  color: var(--golf-light) !important;
+}
+
+.navbar .nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(45, 106, 42, 0.4);
+  border-radius: 0.25rem;
+}
+
+.navbar-toggler {
+  border-color: rgba(245, 240, 230, 0.5);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Links */
+a {
+  color: var(--golf-green);
+}
+
+a:hover {
+  color: var(--golf-dark);
+}
+
+/* Buttons */
+.btn-primary {
+  color: #fff;
+  background-color: var(--golf-green);
+  border-color: var(--golf-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--golf-dark);
+  border-color: #0d2818;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: var(--golf-fairway);
+  border-color: var(--golf-green);
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: var(--golf-green);
+  border-color: var(--golf-dark);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #5a6a58;
+  border-color: #4a5a48;
+  color: var(--golf-sand);
+}
+
+.btn-secondary:hover {
+  background-color: #4a5a48;
+  border-color: #3a4a38;
+  color: #fff;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: var(--golf-green);
+  border-color: var(--golf-dark);
+}
+
+/* Borders & shadow */
+.border-top {
+  border-top: 2px solid var(--golf-green);
+}
+
+.border-bottom {
+  border-bottom: 1px solid #c5d0c5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(26, 60, 23, 0.15);
+}
+
+/* Form controls */
+.form-control {
+  background-color: #fff;
+  border-color: #b0c0ae;
+}
+
+.form-control:focus {
+  border-color: var(--golf-green);
+}
+
+.form-control[readonly] {
+  background-color: var(--golf-light);
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
